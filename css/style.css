@@ -124,7 +124,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3) !important;
+  background-color: rgba(0, 0, 0, 0.4) !important;
   z-index: 1;
 }
 
@@ -181,6 +181,34 @@ nav {
 .average .num1 {
   color: #5d5e8d;
   font-weight: 500;
+}
+#sec2{
+  background: linear-gradient(120deg, rgba(80, 84, 197, 0.9) 0%, rgba(196, 63, 165, 0.9) 100%), 
+            url('../img/bg.jpg') !important;
+  padding: 100px 0;
+}
+.speaker{
+  height: 370px;
+  width: 340px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.4) url('../img/4.jpg');
+  color: white;
+  display: flex;
+  align-items: end !important;
+}
+.speaker .text{
+}
+.bg-color::after {
+    /* position: absolute; */
+    content: "";
+    height: 100%;
+    width: 100%;
+    /* top: 0;
+    left: 0; */
+    /* z-index: -1; */
+    background: linear-gradient(120deg, #df42b1 0%, #505add 100%) !important;
+    opacity: 0.9;
+
 }
 @media only screen and (min-width: 768px) {
   #header h1 {
