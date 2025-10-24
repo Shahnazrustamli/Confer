@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#header {
-  /* min-height: 100vh; */
+#header h1 {
+  font-size: 2em;
 }
+
 nav {
   font: 500 1.1em "Poppins", sans-serif !important;
 }
@@ -9,7 +10,75 @@ nav {
   color: white;
   transition: color 0.3s ease;
 }
-
+.myspan {
+  border: 2px solid #9293bc;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.active {
+  color: rgb(223, 66, 177) !important;
+}
+.offcanvas-body {
+  padding: 0;
+}
+.offcanvas-body a {
+  color: #111343 !important;
+  font: 500 0.8em "Poppins", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 1px;
+  padding: 10px 20px;
+  display: inline-block;
+  width: 100%;
+  background: #f2f4f8;
+}
+.offcanvas-body ul {
+  border: none;
+  padding: 0 !important;
+}
+.offcanvas-body .dropdown-menu a {
+  padding: 0px 30px;
+  background: #fff;
+}
+.science {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.science::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  width: 100%;
+  height: 15px;
+  background: linear-gradient(
+    90deg,
+    rgba(186, 72, 188, 1) 0%,
+    rgba(158, 77, 197, 1) 10%,
+    rgba(116, 84, 210, 1) 100%
+  );
+  z-index: -1;
+}
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+}
+.mytitle-div {
+  display: flex;
+  justify-content: end;
+}
+.mytitle {
+  background: #ffffff1a;
+  width: max-content;
+  padding: 10px 20px;
+  margin-bottom: 40px;
+}
+.myspan:hover {
+  background: #9293bc;
+  transition: 0.6s;
+}
 .btn-gr {
   background: #ba48bcff;
   background: linear-gradient(
@@ -32,20 +101,146 @@ nav {
   width: 100%;
   height: 100%;
   background-color: #fff;
+  /* transition-timing-function: linear !important; */
   transition: 0.6s;
   z-index: -1;
 }
 .btn-gr:hover::after {
   transform: translateX(0);
 }
-.btn-gr:hover{
+.btn-gr:hover {
   color: #212529 !important;
 }
+.links a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 40px 0 50px 0;
+  font: 500 1.1em "Poppins", sans-serif;
+}
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  z-index: 1;
+}
+
+.carousel-caption {
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+}
+#sec1 {
+  background-color: #151853;
+  color: #fff;
+  padding: 100px 0 60px;
+}
+#sec1 h6 {
+  color: #df42b1;
+  font: 500 0.9em "Poppins", sans-serif !important;
+  text-transform: uppercase;
+  border-bottom: 2px solid #4b4d7b;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+#sec1 h2 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font: bold 2em "Poppins", sans-serif !important;
+}
+#sec1 h4 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1px !important;
+  font: bold 1em "Poppins", sans-serif !important;
+}
+#sec1 .text {
+  line-height: 1.8 !important;
+  font: normal 1em "Poppins", sans-serif !important;
+}
+#sec1 .sec1-btn {
+  margin: 120px 0 0 0 !important;
+}
+.average {
+  min-width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  padding: 20px 5px;
+  font-weight: 600;
+  border: 1px solid #5d5e8d;
+}
+.average .num {
+  font-size: 40px !important;
+  margin: 0;
+}
+.average .num1 {
+  color: #5d5e8d;
+  font-weight: 500;
+}
 @media only screen and (min-width: 768px) {
+  #header h1 {
+    font-size: 5.6em;
+  }
+
   .color a:hover {
     color: rgb(223, 66, 177);
   }
   .btn-gr:hover {
     background-position: right;
+  }
+  .myspan2 {
+    height: 40px;
+    width: 25px;
+    background: transparent;
+    border: 2px solid #9293bcff;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .myspan2 span {
+    display: inline-block;
+    border: 1px solid #9293bcff;
+    border-radius: 50%;
+    padding: 2px;
+    background: #9293bcff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: moveDown 2s linear infinite;
+  }
+  .navbar .dropdown .dropdown-menu {
+    display: none;
+  }
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+
+  @keyframes moveDown {
+    0% {
+      top: 0;
+      opacity: 0.2;
+    }
+    50% {
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+    100% {
+      top: 100%;
+      transform: translate(-50%, -100%);
+      opacity: 0.2;
+    }
+  }
+  .myspan {
+    width: 50px;
+    height: 50px;
   }
 }
