@@ -2,6 +2,17 @@
 #header h1 {
   font-size: 2em;
 }
+.top {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #df42b1;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  /* opacity: 0; */
+}
 
 nav {
   font: 500 1.1em "Poppins", sans-serif !important;
@@ -167,12 +178,12 @@ nav {
   margin: 120px 0 0 0 !important;
 }
 .average {
-  min-width: 100px;
-  height: 100px;
+  /* max-width: 100px; */
+  /* height: 100px; */
   margin: 0 10px;
-  padding: 20px 5px;
+  /* padding: 20px 5px; */
   font-weight: 600;
-  border: 1px solid #5d5e8d;
+  /* border: 1px solid #5d5e8d; */
 }
 .average .num {
   font-size: 40px !important;
@@ -182,33 +193,141 @@ nav {
   color: #5d5e8d;
   font-weight: 500;
 }
-#sec2{
-  background: linear-gradient(120deg, rgba(80, 84, 197, 0.9) 0%, rgba(196, 63, 165, 0.9) 100%), 
-            url('../img/bg.jpg') !important;
+#sec2 {
+  background: linear-gradient(
+      120deg,
+      rgba(80, 84, 197, 0.9) 0%,
+      rgba(196, 63, 165, 0.9) 100%
+    ),
+    url("../img/bg.jpg") !important;
   padding: 100px 0;
 }
-.speaker{
+.speaker {
+  position: relative;
   height: 370px;
   width: 340px;
   border-radius: 20px;
-  background: rgba(0, 0, 0, 0.4) url('../img/4.jpg');
   color: white;
   display: flex;
   align-items: end !important;
+  overflow: hidden;
+}
+.speaker-1 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.2) 46%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/4.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.speaker-2 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.2) 46%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/5.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.speaker-3 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.2) 46%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/6.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.speaker-4 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.2) 46%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/7.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.speaker-5 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.2) 46%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/8.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.speaker-6 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.2) 46%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/9.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#sec2 p, #sec3 p {
+  letter-spacing: 1px;
+  font: normal 1em "Poppins", sans-serif !important;
+}
+#sec2 h4, #sec3 h4 {
+  letter-spacing: 1px;
+  font: bold 2em "Poppins", sans-serif !important;
+}
+.speaker .text p {
+  font: normal 1em "Poppins", sans-serif !important;
+  color: #df42b1;
 }
 .speaker .text{
+  padding-left: 10px;
 }
-.bg-color::after {
-    /* position: absolute; */
-    content: "";
-    height: 100%;
-    width: 100%;
-    /* top: 0;
-    left: 0; */
-    /* z-index: -1; */
-    background: linear-gradient(120deg, #df42b1 0%, #505add 100%) !important;
-    opacity: 0.9;
-
+.speaker .text h5 {
+  font: normal 1.3em "Poppins", sans-serif ;
+  margin-bottom: 10px;
+}
+.share {
+  position: absolute;
+  top: -140px;
+  right: 0;
+  opacity: 0;
+  transition: top 0.6s ease-out, opacity 0.6s ease-out;
+  background-color: #df42b1;
+  border-radius: 0 10px 0 10px;
+  padding: 15px;
+}
+.view-all button {
+  border: 2px solid #fff;
+  font-size: 0.9em;
+  font-family: "Poppins", sans-serif !important;
+}
+.view-all a {
+  text-decoration: none;
+  color: white;
+}
+#sec3{
+  background: #151853;
+  padding: 100px 0;
+}
+#sec3 .head p{
+  color: #df42b1;
+}
+#sec3 .shedule-plan ul{
+  /* border: 1px solid white; */
+  border-radius: 10px;
+  padding: 15px 30px;
+  background: #5d5e8d;
 }
 @media only screen and (min-width: 768px) {
   #header h1 {
@@ -270,5 +389,20 @@ nav {
   .myspan {
     width: 50px;
     height: 50px;
+  }
+  .speaker:hover .share {
+    top: 0;
+    opacity: 1;
+  }
+  .view-all button:hover {
+    background: #df42b1;
+    border: 2px solid #df42b1;
+    transition-duration: 0.4s;
+  }
+  .top:hover {
+    background: #000;
+  }
+  #sec2 h4, #sec3 h4 {
+    font: bolder 2.3em "Poppins", sans-serif !important;
   }
 }
