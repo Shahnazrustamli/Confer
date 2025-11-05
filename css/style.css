@@ -11,7 +11,6 @@
   position: fixed;
   bottom: 40px;
   right: 40px;
-  /* opacity: 0; */
 }
 
 nav {
@@ -138,7 +137,9 @@ nav {
   background-color: rgba(0, 0, 0, 0.4) !important;
   z-index: 1;
 }
-
+.slide {
+  height: 100vh;
+}
 .carousel-caption {
   z-index: 2;
   top: 50%;
@@ -175,15 +176,11 @@ nav {
   font: normal 1em "Poppins", sans-serif !important;
 }
 #sec1 .sec1-btn {
-  margin: 120px 0 0 0 !important;
+  margin: 120px 0 10px 0 !important;
 }
 .average {
-  /* max-width: 100px; */
-  /* height: 100px; */
   margin: 0 10px;
-  /* padding: 20px 5px; */
   font-weight: 600;
-  /* border: 1px solid #5d5e8d; */
 }
 .average .num {
   font-size: 40px !important;
@@ -278,11 +275,15 @@ nav {
   background-size: cover;
   background-position: 50% 50%;
 }
-#sec2 p, #sec3 p {
+#sec2 p,
+#sec3 p,
+#sec5 p {
   letter-spacing: 1px;
   font: normal 1em "Poppins", sans-serif !important;
 }
-#sec2 h4, #sec3 h4 {
+#sec2 h4,
+#sec3 h4,
+#sec5 h4 {
   letter-spacing: 1px;
   font: bold 2em "Poppins", sans-serif !important;
 }
@@ -290,19 +291,18 @@ nav {
   font: normal 1em "Poppins", sans-serif !important;
   color: #df42b1;
 }
-.speaker .text{
+.speaker .text {
   padding-left: 10px;
 }
 .speaker .text h5 {
-  font: normal 1.3em "Poppins", sans-serif ;
+  font: normal 1.3em "Poppins", sans-serif;
   margin-bottom: 10px;
 }
 .share {
   position: absolute;
-  top: -140px;
+  top: -150px;
   right: 0;
-  opacity: 0;
-  transition: top 0.6s ease-out, opacity 0.6s ease-out;
+  transition: top 0.6s ease-out;
   background-color: #df42b1;
   border-radius: 0 10px 0 10px;
   padding: 15px;
@@ -316,18 +316,141 @@ nav {
   text-decoration: none;
   color: white;
 }
-#sec3{
+#sec3 {
   background: #151853;
   padding: 100px 0;
 }
-#sec3 .head p{
+#sec3 .head p {
   color: #df42b1;
 }
-#sec3 .shedule-plan ul{
-  /* border: 1px solid white; */
-  border-radius: 10px;
-  padding: 15px 30px;
+#sec3 .shedule-plan ul {
+  border-radius: 10px !important;
   background: #5d5e8d;
+}
+.plan-days a {
+  font: 1, 1em "Poppins", sans-serif !important;
+  color: white;
+  padding: 15px 30px;
+}
+.plan-days span {
+  text-transform: capitalize;
+  font: 0.8em "Poppins", sans-serif !important;
+}
+ul .day2 {
+  background: #1f2371 !important;
+}
+.day2 span,
+.day2 a {
+  color: #9293bc !important;
+}
+.day3 {
+  border-radius: 0 10px 10px 0;
+}
+.shedule {
+  color: white;
+  border: 1px solid #444675 !important;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 20px;
+  gap: 30px;
+  font: 400 0.6em "Poppins", sans-serif;
+}
+.shedule h6 {
+  font: bold 0.7em "Poppins", sans-serif !important;
+}
+.shedule p {
+  font: normal 0.6em "Poppins", sans-serif !important;
+}
+.shedule i {
+  color: #df42b1;
+}
+.shedule span {
+  color: #9293bc;
+}
+.shedule img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.borderr {
+  width: max-content;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 2px;
+  border-radius: 23px;
+  background: linear-gradient(45deg, #df42b1, #9293bc);
+}
+.download button {
+  /* text-decoration: none; */
+  color: white;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #151853;
+  padding: 10px 30px;
+  border-radius: 23px;
+}
+#sec4 {
+  background-image: linear-gradient(
+      120deg,
+      rgba(80, 84, 197, 0.9) 0%,
+      rgba(196, 63, 165, 0.9) 100%
+    ),
+    url("../img/14.jpg");
+    background-attachment: fixed;
+}
+#sec6 {
+  background-image: linear-gradient(
+      120deg,
+      rgba(80, 84, 197, 0.9) 0%,
+      rgba(196, 63, 165, 0.9) 100%
+    ),
+    url("../img/17.jpg");
+    background-attachment: fixed;
+}
+#sec5 {
+  background: #151853;
+  padding: 100px 0 100px 0;
+}
+.ratio {
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.ratio img {
+  margin: auto;
+  object-fit: contain;
+  opacity: 0.5;
+  width: 90%;
+  height: 90%;
+}
+.containerr {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0;
+}
+.border-col3 {
+  border: 1px solid #444675;
+}
+.ticket {
+  max-width: 350px;
+  font: 400 1em "Poppins", sans-serif;
+}
+.ticket > :first-child {
+  background: #df42b1;
+}
+.row {
+  width: 100%;
+}
+.ticket h2 {
+  font-size: clamp(1rem, 5vw, 3.8rem);
+  font-weight: 600;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.ticket span {
+  font-size: 2rem;
 }
 @media only screen and (min-width: 768px) {
   #header h1 {
@@ -392,7 +515,6 @@ nav {
   }
   .speaker:hover .share {
     top: 0;
-    opacity: 1;
   }
   .view-all button:hover {
     background: #df42b1;
@@ -402,7 +524,39 @@ nav {
   .top:hover {
     background: #000;
   }
-  #sec2 h4, #sec3 h4 {
+  #sec2 h4,
+  #sec3 h4,
+  #sec5 h4 {
     font: bolder 2.3em "Poppins", sans-serif !important;
   }
+  .shedule:hover {
+    border: 1px solid #df42b1 !important;
+    transition-duration: 0.6s;
+  }
+  .download button:hover {
+    background: linear-gradient(45deg, #df42b1, #9293bc);
+    transition-duration: 1s !important;
+  }
+  .shedule {
+    font: 400 1em "Poppins", sans-serif;
+  }
+  .shedule h6 {
+    font: bold 1.3em "Poppins", sans-serif !important;
+  }
+  .shedule img {
+    width: 90px;
+    height: 90px;
+  }
+  .ratio img:hover {
+    opacity: 1;
+  }
+  #sec4, #sec6{
+    padding: 100px 0;
+  }
+  .ticket a:hover{
+    box-shadow:  0 0 20px #b1b1b1;
+  }
+  .average .num {
+  font-size: 60px !important;
+}
 }
