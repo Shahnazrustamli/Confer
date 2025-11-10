@@ -12,7 +12,6 @@
   bottom: 40px;
   right: 40px;
 }
-
 nav {
   font: 500 1.1em "Poppins", sans-serif !important;
 }
@@ -100,7 +99,7 @@ nav {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  padding: 100px;
+  padding: 10px;
 }
 .btn-gr::after {
   content: "";
@@ -111,21 +110,16 @@ nav {
   width: 100%;
   height: 100%;
   background-color: #fff;
-  /* transition-timing-function: linear !important; */
   transition: 0.6s;
   z-index: -1;
 }
 .btn-gr:hover::after {
   transform: translateX(0);
 }
-.btn-gr:hover {
-  color: #212529 !important;
-}
 .links a {
   display: inline-block;
   text-decoration: none;
-  margin: 40px 0 50px 0;
-  font: 500 1.1em "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .carousel-item::before {
   content: "";
@@ -176,19 +170,19 @@ nav {
   font: normal 1em "Poppins", sans-serif !important;
 }
 #sec1 .sec1-btn {
-  margin: 120px 0 10px 0 !important;
+  margin-bottom: 10px;
+  margin-top: clamp(40px, 10vw, 140px);
 }
-.average {
-  margin: 0 10px;
-  font-weight: 600;
+.border-col3 {
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
-.average .num {
-  font-size: 40px !important;
-  margin: 0;
+.num {
+  font-size: clamp(1.1rem, 4vw, 5rem);
+  font-weight: 700;
 }
-.average .num1 {
-  color: #5d5e8d;
-  font-weight: 500;
+
+.num1 {
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
 }
 #sec2 {
   background: linear-gradient(
@@ -199,6 +193,7 @@ nav {
     url("../img/bg.jpg") !important;
   padding: 100px 0;
 }
+
 .speaker {
   position: relative;
   height: 370px;
@@ -283,6 +278,9 @@ nav {
 }
 #sec2 h4,
 #sec3 h4,
+#sec4 h4,
+#sec6 h4,
+#sec7 h4,
 #sec5 h4 {
   letter-spacing: 1px;
   font: bold 2em "Poppins", sans-serif !important;
@@ -323,9 +321,9 @@ nav {
 #sec3 .head p {
   color: #df42b1;
 }
-#sec3 .shedule-plan ul {
-  border-radius: 10px !important;
+.day-1 {
   background: #5d5e8d;
+  border-radius: 10px 0 0 10px;
 }
 .plan-days a {
   font: 1, 1em "Poppins", sans-serif !important;
@@ -335,6 +333,9 @@ nav {
 .plan-days span {
   text-transform: capitalize;
   font: 0.8em "Poppins", sans-serif !important;
+}
+.day-2 {
+  border-right: 1px solid gray;
 }
 ul .day2 {
   background: #1f2371 !important;
@@ -381,7 +382,6 @@ ul .day2 {
   background: linear-gradient(45deg, #df42b1, #9293bc);
 }
 .download button {
-  /* text-decoration: none; */
   color: white;
   width: 100%;
   height: 100%;
@@ -397,7 +397,7 @@ ul .day2 {
       rgba(196, 63, 165, 0.9) 100%
     ),
     url("../img/14.jpg");
-    background-attachment: fixed;
+  background-attachment: fixed;
 }
 #sec6 {
   background-image: linear-gradient(
@@ -406,7 +406,7 @@ ul .day2 {
       rgba(196, 63, 165, 0.9) 100%
     ),
     url("../img/17.jpg");
-    background-attachment: fixed;
+  background-attachment: fixed;
 }
 #sec5 {
   background: #151853;
@@ -417,7 +417,7 @@ ul .day2 {
   align-items: center !important;
   justify-content: center !important;
 }
-.ratio img {
+#sec5 .ratio img {
   margin: auto;
   object-fit: contain;
   opacity: 0.5;
@@ -434,6 +434,7 @@ ul .day2 {
 }
 .ticket {
   max-width: 350px;
+  transition: transform 0.3s ease;
   font: 400 1em "Poppins", sans-serif;
 }
 .ticket > :first-child {
@@ -441,6 +442,7 @@ ul .day2 {
 }
 .row {
   width: 100%;
+  --bs-gutter-x: 0;
 }
 .ticket h2 {
   font-size: clamp(1rem, 5vw, 3.8rem);
@@ -452,6 +454,94 @@ ul .day2 {
 .ticket span {
   font-size: 2rem;
 }
+.ticket .image {
+  width: 100%;
+  overflow: hidden;
+}
+.scroll::-webkit-scrollbar {
+  display: contents;
+}
+.my-slider {
+  background: #44467581;
+  padding: 1em;
+}
+.text-pink {
+  color: #df42b1;
+}
+footer {
+  background: #111343;
+  font-family: "Poppins", sans-serif;
+  line-height: 2em;
+  .icon {
+    font-size: 0.9em;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #3d3e66;
+    border-radius: 50%;
+  }
+  ul li a,
+  a {
+    text-decoration: none;
+  }
+  .copyright {
+    border-top: 1px solid #9293bc;
+  }
+  ul,
+  ul i,
+  .copyright p {
+    font-size: 0.9em;
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .ratio img {
+    opacity: 1;
+    margin: auto;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 9px;
+  }
+
+  .gallery-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      rgba(80, 84, 197, 0.7) 0%,
+      rgba(196, 63, 165, 0.7) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 9px;
+  }
+}
+#sec6 {
+  .card {
+    margin-bottom: 3em;
+  }
+}
+#sec7 {
+  background: #151853;
+  font-family: "Poppins", sans-serif;
+  input, textarea {
+    border-bottom: 1px solid #dbdcf1 !important;
+    color: #9293bc;
+  }
+  input:focus , textarea:focus{
+    border-bottom: 1px solid #5d5e8d !important;
+
+    outline: none;
+  }
+}
 @media only screen and (min-width: 768px) {
   #header h1 {
     font-size: 5.6em;
@@ -460,8 +550,10 @@ ul .day2 {
   .color a:hover {
     color: rgb(223, 66, 177);
   }
+  #sec7 a,
   .btn-gr:hover {
     background-position: right;
+    color: #212529 !important;
   }
   .myspan2 {
     height: 40px;
@@ -492,7 +584,9 @@ ul .day2 {
     display: block;
     margin-top: 0;
   }
-
+  #sec5 .ratio img:hover {
+    opacity: 1;
+  }
   @keyframes moveDown {
     0% {
       top: 0;
@@ -526,7 +620,10 @@ ul .day2 {
   }
   #sec2 h4,
   #sec3 h4,
-  #sec5 h4 {
+  #sec4 h4,
+  #sec5 h4,
+  #sec6 h4,
+  #sec7 h4 {
     font: bolder 2.3em "Poppins", sans-serif !important;
   }
   .shedule:hover {
@@ -547,16 +644,39 @@ ul .day2 {
     width: 90px;
     height: 90px;
   }
-  .ratio img:hover {
-    opacity: 1;
-  }
-  #sec4, #sec6{
+
+  #sec4,
+  #sec6 {
     padding: 100px 0;
   }
-  .ticket a:hover{
-    box-shadow:  0 0 20px #b1b1b1;
+  .ticket a:hover {
+    box-shadow: 0 0 20px #b1b1b1;
   }
-  .average .num {
-  font-size: 60px !important;
-}
+  .ticket:hover {
+    transform: scale(1.1);
+  }
+  footer .icon:hover {
+    background: #9293bc;
+    transition-duration: 0.6s;
+  }
+  footer ul li a:hover,
+  .copyright ul li:hover {
+    color: #fff !important;
+    transition-duration: 0.6s;
+  }
+  .gallery-item:hover::after {
+    opacity: 1;
+  }
+  #sec6 .card img {
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+  #sec6 .card:hover img {
+    transform: scale(1.1);
+  }
+  #sec6 link:hover,
+  #sec6 .card h5:hover {
+    color: #df42b1;
+    transition-duration: 0.6s;
+  }
 }
